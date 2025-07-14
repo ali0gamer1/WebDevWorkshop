@@ -3,7 +3,18 @@
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     
 }
-
+a:hover
+{
+    text-decoration: underline;
+}
+a
+{
+    text-decoration: none;
+}
+.recipe-description
+{
+    width: 350px;
+}
 .recipe-image
 {
     width: 200px;
