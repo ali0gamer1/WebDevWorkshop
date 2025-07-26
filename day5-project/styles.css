@@ -10,12 +10,18 @@
     padding: 25px;
 }
 
-
 .content
 {
     max-width: max-content;
     margin: 0 auto;
 
+    
+}
+
+
+.controller
+{
+    
     
 }
 

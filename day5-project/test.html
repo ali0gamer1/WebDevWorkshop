@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Draggable Floating Menu</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: sans-serif;
+    }
+
+    .floating-menu {
+      position: fixed;
+      top: 20px;
+      left: 20px;
+      background-color: #222;
+      color: white;
+      padding: 10px;
+      z-index: 1000;
+      display: flex;
+      gap: 10px;
+      align-items: center;
+      border-radius: 5px;
+      cursor: move; /* indicate draggable */
+      user-select: none; /* prevent text selection while dragging */
+    }
+
+    .content {
+      margin-top: 100px;
+      padding: 20px;
+    }
+
+    input {
+      padding: 5px;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="floating-menu" id="draggable-menu">
+    <label for="bg-color">Background:</label>
+    <input type="color" id="bg-color" />
+    <label for="text-size">Text Size:</label>
+    <input type="number" id="text-size" min="10" max="50" value="16" />
+  </div>
+
+  <div class="content" id="main-content">
+    <p>This is the main content of the page.</p>
+    <p>Scroll down to see that the menu stays in place.</p>
+    <p style="margin-top: 1000px;">End of page.</p>
+  </div>
+
+  <script>
+    const menu = document.getElementById('draggable-menu');
+    const bgInput = document.getElementById('bg-color');
+    const textSizeInput = document.getElementById('text-size');
+    const content = document.getElementById('main-content');
+
+    bgInput.addEventListener('input', () => {
+      content.style.backgroundColor = bgInput.value;
+    });
+
+    textSizeInput.addEventListener('input', () => {
+      content.style.fontSize = textSizeInput.value + 'px';
+    });
+
+    // Dragging logic
+    let isDragging = false;
+    let offsetX = 0;
+    let offsetY = 0;
+
+    menu.addEventListener('mousedown', (e) => {
+      isDragging = true;
+      offsetX = e.clientX - menu.offsetLeft;
+      offsetY = e.clientY - menu.offsetTop;
+      document.body.style.userSelect = "none"; // prevent selecting text while dragging
+    });
+
+    document.addEventListener('mousemove', (e) => {
+      if (isDragging) {
+        menu.style.left = (e.clientX - offsetX) + 'px';
+        menu.style.top = (e.clientY - offsetY) + 'px';
+      }
+    });
+
+    document.addEventListener('mouseup', () => {
+      isDragging = false;
+      document.body.style.userSelect = ""; // restore text selection
+    });
+  </script>
+
+</body>
+</html>
