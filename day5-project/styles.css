@@ -11,23 +11,35 @@
 }
 
 .content
-{
-    max-width: max-content;
+{    max-width: max-content;
+
     margin: 0 auto;
 
     
 }
+#back_button
+{
+    z-index: 1000;
+    position: fixed;
+    background-color: aqua;
+    color:black;
+    top: 95%;
+}
 
 
 .controller
-{
+{  
     
-    
+
+    display: inline;
 }
+
 
 .controls
 {
-    width: max-content;
+    
+    width: 200px;
+
 }
 
 #TheSmallerOne
