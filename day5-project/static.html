@@ -15,7 +15,8 @@
                 <span class="spanText"> Hey there! </span>
             </div>
         </div>  
-        <div class="controls">
+        <div class="controls floating-menu"   id="draggable-menu">
+
             <div class="controller">
                 <label class="form-label">Big Box padding value:</label>
                 <input type="range" class="form-range"  oninput="this.nextElementSibling.value= this.value; changePaddingValue(this.value, 1)">
@@ -60,7 +61,7 @@
         </div>
     </div>
     
-    <a href="index.html">Back</a>
+    <a href="index.html" id="back_button"><button>Back</button></a>
 
 </body>
 <script src="./script.js"></script>

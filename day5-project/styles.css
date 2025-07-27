@@ -10,6 +10,29 @@
     padding: 25px;
 }
 
+.form-controle {
+  font-family: system-ui, sans-serif;
+  line-height: 1.1;
+  display: grid;
+  grid-template-columns: 1em auto;
+  gap: 0.5em;
+}
+
+.floating-menu {
+        outline: 4px solid black;
+        position: fixed;
+        top: 20px;
+        left: 20px;
+        background-color: #222;
+        color: white;
+        padding: 10px;
+        z-index: 1000;
+        gap: 10px;
+        border-radius: 5px;
+        cursor: move; /* indicate draggable */
+        user-select: none; /* prevent text selection while dragging */
+    }
+
 .content
 {    max-width: max-content;
 
