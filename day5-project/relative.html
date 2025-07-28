@@ -25,7 +25,7 @@
                     <label class="form-controle" for="herher"> <input
                             style="transform: translateY(0.03em);" id="herher"
                             name="herher" type="checkbox"
-                            onchange="changeDisplay(this, 1)">Big box
+                            onchange="changeDisplay(this, 1, 'relative')">Big box
                         relative</label>
                 </div>
                 <br>
@@ -33,7 +33,7 @@
                     <label class="form-label">Big Box padding value:</label>
                     <output>25</output>
 
-                    <input value="25" type="range" id="bigBox"
+                    <input value="25" type="range" min = "-100" max="100"id="bigBox"
                         class="form-range"
                         oninput="this.previousElementSibling.value= this.value; changePaddingValue(this.value, 1)">
                 </div>
@@ -44,7 +44,7 @@
                     <label class="form-label">SmallBox padding value:</label>
                     <output>0</output>
 
-                    <input value="0" type="range" class="form-range"
+                    <input value="0" type="range" min = "-100" max="100"class="form-range"
                         oninput="this.previousElementSibling.value= this.value; changePaddingValue(this.value, 2)">
                 </div>
 
@@ -57,7 +57,7 @@
                 <div class="controller">
                     <label class="form-label"> Left: </label>
                     <output>0</output>
-                    <input value="0" type="range" class="form-range"
+                    <input value="0" type="range" min = "-100" max="100"class="form-range"
                         oninput="this.previousElementSibling.value= this.value; changeCords(this.value,'left' , 1)">
 
                 </div>
@@ -65,21 +65,21 @@
                 <div class="controller">
                     <label class="form-label"> Right: </label>
                     <output>0</output>
-                    <input value="0" type="range" class="form-range"
+                    <input value="0" type="range" min = "-100" max="100"class="form-range"
                         oninput="this.previousElementSibling.value= this.value; changeCords(this.value,'right' , 1)">
                 </div>
                 <div class="controller">
                     <label class="form-label"> top: </label>
                     <output>0</output>
 
-                    <input value="0" type="range" class="form-range"
+                    <input value="0" type="range" min = "-100" max="100"class="form-range"
                         oninput="this.previousElementSibling.value= this.value; changeCords(this.value,'top' , 1)">
                 </div>
                 <div class="controller">
                     <label class="form-label"> bottom: </label>
                     <output>0</output>
 
-                    <input value="0" type="range" class="form-range"
+                    <input value="0" type="range" min = "-100" max="100"class="form-range"
                         oninput="this.previousElementSibling.value= this.value; changeCords(this.value,'bottom' , 1)">
                 </div>
 

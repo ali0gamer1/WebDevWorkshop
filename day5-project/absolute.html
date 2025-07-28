@@ -1,11 +1,100 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    
-</body>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Absolute</title>
+        <link
+            href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css"
+            rel="stylesheet"
+            integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr"
+            crossorigin="anonymous">
+
+        <link rel="stylesheet" href="styles.css">
+    </head>
+    <body>
+        <div class="content">
+            <div id="TheBiggerOne">
+                <div id="TheSmallerOne">
+                    <span class="spanText"> Hey there! </span>
+                </div>
+            </div>
+            <div class="controls floating-menu" id="draggable-menu">
+                <div class="controller .form-check">
+
+                    <label class="form-controle" for="herher"> <input
+                            style="transform: translateY(0.03em);" id="herher"
+                            name="herher" type="checkbox"
+                            onchange="changeDisplay(this, 1, 'absolute')">Big box
+                        absolute</label>
+                </div>
+                <br>
+                <div class="controller">
+                    <label class="form-label">Big Box padding value:</label>
+                    <output>25</output>
+
+                    <input value="25" type="range" min = "-100" max="100"id="bigBox"
+                        class="form-range"
+                        oninput="this.previousElementSibling.value= this.value; changePaddingValue(this.value, 1)">
+                </div>
+
+                <br>
+
+                <div class="controller">
+                    <label class="form-label">SmallBox padding value:</label>
+                    <output>0</output>
+
+                    <input value="0" type="range" min = "-100" max="100"class="form-range"
+                        oninput="this.previousElementSibling.value= this.value; changePaddingValue(this.value, 2)">
+                </div>
+
+                <br>
+
+                <span class="form-label">Left, Right, Top, Bottom: </span>
+                <br>
+                <br>
+
+                <div class="controller">
+                    <label class="form-label"> Left: </label>
+                    <output>0</output>
+                    <input value="0" type="range" min = "-100" max="100"class="form-range"
+                        oninput="this.previousElementSibling.value= this.value; changeCords(this.value,'left' , 1)">
+
+                </div>
+
+                <div class="controller">
+                    <label class="form-label"> Right: </label>
+                    <output>0</output>
+                    <input value="0" type="range" min = "-100" max="100"class="form-range"
+                        oninput="this.previousElementSibling.value= this.value; changeCords(this.value,'right' , 1)">
+                </div>
+                <div class="controller">
+                    <label class="form-label"> top: </label>
+                    <output>0</output>
+
+                    <input value="0" type="range" min = "-100" max="100"class="form-range"
+                        oninput="this.previousElementSibling.value= this.value; changeCords(this.value,'top' , 1)">
+                </div>
+                <div class="controller">
+                    <label class="form-label"> bottom: </label>
+                    <output>0</output>
+
+                    <input value="0" type="range" min = "-100" max="100"class="form-range"
+                        oninput="this.previousElementSibling.value= this.value; changeCords(this.value,'bottom' , 1)">
+                </div>
+
+                <button style="display: block;"
+                    onclick="clearInputs()">Clear</button>
+            </div>
+        </div>
+
+        <a href="index.html">Back</a>
+
+    </body>
+    <script src="./script.js"></script>
+    <script
+        src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q"
+        crossorigin="anonymous"></script>
+
 </html>

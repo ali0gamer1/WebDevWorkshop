@@ -88,8 +88,9 @@ function changeCords(posVal, whichPos, whichBox)
     
 }
 
-function changeDisplay(test, whichBox = 1)
+function changeDisplay(checkBox, whichBox = 1, posVal = "static")
 {
+    
     theBox = null;
 
     if (whichBox == 1)
@@ -97,10 +98,11 @@ function changeDisplay(test, whichBox = 1)
     else
         theBox = theSmallBox;
     
+    posVals = ["static", posVal];
 
-    const posVals = ["static", "relative"];
+    
 
-    theBox.style.position = posVals[+test.checked];
+    theBox.style.position = posVals[+checkBox.checked];
 
 }
 
