@@ -1,0 +1,39 @@
+.flex-container
+{
+    display: flex;
+    height: 50px;
+    background-color: cyan;
+}
+
+
+.section1, .section2, .section3
+{
+    flex: 1;
+    outline: 2px solid black;
+}
+
+.section2
+{
+    display: flex;
+    flex-direction: column;
+
+}
+
+.inner1, .inner2
+{
+    flex: 1;
+    
+}
+
+
+.inner1
+{
+    background-color: red;
+}
+
+.inner2
+{
+    background-color: blue;
+
+
+}
