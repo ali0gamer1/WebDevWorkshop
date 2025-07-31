@@ -1,0 +1,98 @@
+.flex-container
+{
+    display: flex;
+    background-color: lightcoral;
+}
+
+
+.natije
+{
+    border: 2px solid yellow;
+
+    flex: 1;
+}
+
+
+.madar
+{
+    flex-direction: column;
+    height: 400px;
+    width: 65%;
+    
+}
+
+
+
+
+.nave1
+{
+    outline: 2px solid red;
+margin: 5px;  
+    flex: 2;
+}
+.nave2
+{
+    outline: 2px solid red;
+margin: 5px;  
+    flex: 1;
+}
+
+
+.nave3
+{    
+    outline: 2px solid red;
+margin: 5px;  
+    flex: 1;
+}
+
+.nave4
+{  
+    margin: 5px;  
+   
+    outline: 2px solid red;
+
+    flex: 2;
+}
+
+
+
+
+.nave
+{
+    padding: 5px;
+    outline: 2px solid red;
+
+    flex: 1;
+    margin: 15px;
+}
+
+.farzand1
+{
+    outline: 2px solid black;
+    
+    box-sizing: border-box;
+    
+    margin: 15px;
+    flex: 1;
+    height: 20%;
+
+}
+
+.farzand2
+{
+    margin: 15px;
+    outline: 2px solid black;
+    flex: 1;
+}
+
+.farzand3
+{
+    outline: 2px solid black;
+    
+    
+    margin: 15px;
+    flex: 1;
+    
+
+}
+
